@@ -258,22 +258,17 @@ function MainPage() {
           <h1 style={{ fontWeight: "bold" }}>WORK HISTORY</h1>
           <br></br><br></br>
           <div className="row">
-            <h3 style={{ fontWeight: "bold" }} className="col-md-5">RUTGERS CODING BOOTCAMP</h3>
-            <h5 className="offset-md-4">Jan 2020 - Apr 2020</h5>
+            <h3 style={{ fontWeight: "bold" }} className="col-md-5">Transaera</h3>
+            <h5 className="offset-md-4">Feb 2019 - Sep 2019</h5>
           </div>
-          <h5 style={{ color:"gray" }}>CERTIFIED FULL STACK DEVELOPER</h5>
+          <h5 style={{ color:"gray" }}>Simulation & Modeling Intern - Global Cooling Prize</h5>
+          <div style={{marginLeft:"1%"}}>
+            <h6>- Selected as top 8 of Global Cooling Prize with 140 competitors from 31 countries.</h6>
+            <h6>- Performed first principle level calculation of heat transfer for vapor compression(HVAC) system</h6>
+            <h6>- Developped thermal model to simulate system operation process and energy consumption using Matlab</h6>
+            <h6>- Provided design insight from data analysis</h6>
+          </div>
           <br></br><br></br>
-          <div className="row">
-            <h3 style={{ fontWeight: "bold" }} className="col-md-5">BOSTON UNIVERSITY</h3>
-            <h5 className="offset-md-4">Sep 2017 - May 2019</h5>
-          </div>
-          <h5 style={{ color : "gray" }}>MASTER of SCIENCE in MECHANICAL ENGINEERING - THERMAL FLUID CONCENTRATION </h5>
-          <br></br><br></br>
-          <div className="row">
-            <h3 style={{ fontWeight: "bold" }} className="col-md-7">NATIONAL SUN-YAT-SEN UNIVERSITY</h3>
-            <h5 className="offset-md-2">Sep 2013 - MAY 2017</h5>
-          </div>
-          <h5 style={{ color : "gray" }}>BACHELOR of SCIENCE in PHYSICS </h5>
         </div>
       </main>
     </div>
