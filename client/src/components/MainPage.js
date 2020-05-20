@@ -21,9 +21,16 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MailIcon from "@material-ui/icons/Mail";
 import photo from "../asset/image/personal_photo.JPG"
 import Jquery from "../asset/image/jQuery.png"
-import { AiFillGithub, AiFillLinkedin, AiFillHtml5 } from "react-icons/ai";
+import gameFound from "../asset/image/gameFound.png"
+import googleBook from "../asset/image/googleBook.png"
+import tablify from "../asset/image/tablify.png"
+import voca from "../asset/image/Voca.png"
+import { AiFillGithub, AiFillLinkedin, AiFillHtml5, AiOutlineGlobal } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoNodejs } from "react-icons/io"
-import { FaReact, FaNpm, FaNode, FaCheckSquare } from "react-icons/fa"
+import { BsBookHalf } from "react-icons/bs"
+import { GiMuscleUp } from "react-icons/gi"
+import { GrUserWorker } from "react-icons/gr"
+import { FaReact, FaNpm, FaCheckSquare } from "react-icons/fa"
 import { DiMysql, DiMongodb } from "react-icons/di"
 import Scroll from "react-scroll"
 let Link = Scroll.Link
@@ -153,30 +160,57 @@ function MainPage() {
         <Divider />
 
         <List>
-          <Link activeClass="active" to="firstInsideContainer" smooth={true} duration={250} style={{ display: "inline-block" }}>
-
+          <Link activeClass="active" to="Information" smooth={true} duration={250} style={{ display: "inline-block" }}>
             <ListItem button key={"Information"} >
-              <ListItemIcon>
+              <ListItemIcon style={{ marginLeft:"1%"}}>
                 <AssignmentIndIcon />
               </ListItemIcon>
               <ListItemText primary={"Information"} />
             </ListItem>
           </Link>
-          <ListItem button key={"Project"}>
-            <ListItemIcon><FolderIcon /> </ListItemIcon>
-            <ListItemText primary={"Project"} />
-          </ListItem>
-          <ListItem button key={"Contact"}>
-            <ListItemIcon><MailIcon /> </ListItemIcon>
-            <ListItemText primary={"Contact"} />
-          </ListItem>
-
+          <br></br>
+          <Link activeClass="active" to="Skills" smooth={true} duration={250} style={{ display: "inline-block" }}>
+            <ListItem button key={"Skills"} >
+              <ListItemIcon>
+                <GiMuscleUp />
+              </ListItemIcon>
+              <ListItemText primary={"Skills"} />
+            </ListItem>
+          </Link>
+          <br></br>
+          <Link activeClass="active" to="Education" smooth={true} duration={250} style={{ display: "inline-block" }}>
+            <ListItem button key={"Education"} >
+              <ListItemIcon>
+                <BsBookHalf />
+              </ListItemIcon>
+              <ListItemText primary={"Education"} />
+            </ListItem>
+          </Link>
+          <br></br>
+          <Link activeClass="active" to="Work" smooth={true} duration={250} style={{ display: "inline-block" }}>
+            <ListItem button key={"Work"} >
+              <ListItemIcon>
+                <GrUserWorker />
+              </ListItemIcon>
+              <ListItemText primary={"Work exp"} />
+            </ListItem>
+          </Link>
+          <br></br>
+          <Link activeClass="active" to="Projects" smooth={true} duration={250} style={{ display: "inline-block" }}>
+            <ListItem button key={"Work"} >
+              <ListItemIcon>
+                <FolderIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Projects"} />
+            </ListItem>
+          </Link>
+          
         </List>
 
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Element name="firstInsideContainer"></Element>
+        <Element name="Information"></Element>
         <div className="row" style={{ marginTop: "8%", marginBottom: "10%" }}>
 
           <div className="col-md-3">
@@ -185,7 +219,7 @@ function MainPage() {
           <div className="col-md-8">
             <Typography paragraph>
               <h2 id="Section1">Chih-Chien Lin</h2>
-              <p>7 Primrose La, Colts Neck, NJ 07722 - (732)8043047 - <a class="text-lowercase" href="mailto:chihchienlin93@gmail.com">chihchienlin93@gmail.com</a></p>
+              <p>Colts Neck, NJ 07722 - (732)8043047 - <a class="text-lowercase" href="mailto:chihchienlin93@gmail.com">chihchienlin93@gmail.com</a></p>
               <p>I am a full Stack Web Developer / Mechanical Engineer, passionate to programming skills and problem-solving. I love to learn and practice new technologies by working with other programmers to build cool projects! </p>
               <br></br>
 
@@ -198,13 +232,14 @@ function MainPage() {
 
         <hr></hr>
         {/* -----SKills----- */}
+        <Element name="Skills"></Element>
         <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
           <h1 style={{ fontWeight: "bold" }}>SKILLS</h1>
           <br></br><br></br>
           <h3 >Programming Languages & Tools</h3>
           <br></br><br></br>
           <i><AiFillHtml5 size={50} /></i>
-          <i style={{ marginLeft: "2%" }}><DiMongodb size={50} /></i>
+          <i style={{ marginLeft: "2%" }} titel="MongoDB"><DiMongodb size={50} /></i>
           <i style={{ marginLeft: "2%" }}><FaReact size={50} /></i>
           <i style={{ marginLeft: "2%" }}><IoLogoCss3 size={50} /></i>
           <i style={{ marginLeft: "2%" }}><IoLogoJavascript size={50} /></i>
@@ -231,6 +266,7 @@ function MainPage() {
         </div>
         <hr></hr>
         {/* -----Education----- */}
+        <Element name="Education"></Element>
         <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
           <h1 style={{ fontWeight: "bold" }}>EDUCATION</h1>
           <br></br><br></br>
@@ -238,22 +274,24 @@ function MainPage() {
             <h3 style={{ fontWeight: "bold" }} className="col-md-5">RUTGERS CODING BOOTCAMP</h3>
             <h5 className="offset-md-4">Jan 2020 - Apr 2020</h5>
           </div>
-          <h5 style={{ color:"gray" }}>CERTIFIED FULL STACK DEVELOPER</h5>
+          <h5 style={{ color: "gray" }}>CERTIFIED FULL STACK DEVELOPER</h5>
           <br></br><br></br>
           <div className="row">
             <h3 style={{ fontWeight: "bold" }} className="col-md-5">BOSTON UNIVERSITY</h3>
             <h5 className="offset-md-4">Sep 2017 - May 2019</h5>
           </div>
-          <h5 style={{ color : "gray" }}>MASTER of SCIENCE in MECHANICAL ENGINEERING - THERMAL FLUID CONCENTRATION </h5>
+          <h5 style={{ color: "gray" }}>MASTER of SCIENCE in MECHANICAL ENGINEERING - THERMAL FLUID CONCENTRATION </h5>
           <br></br><br></br>
           <div className="row">
             <h3 style={{ fontWeight: "bold" }} className="col-md-7">NATIONAL SUN-YAT-SEN UNIVERSITY</h3>
             <h5 className="offset-md-2">Sep 2013 - MAY 2017</h5>
           </div>
-          <h5 style={{ color : "gray" }}>BACHELOR of SCIENCE in PHYSICS </h5>
+          <h5 style={{ color: "gray" }}>BACHELOR of SCIENCE in PHYSICS </h5>
         </div>
         <hr></hr>
         {/* -----Work history----- */}
+        <Element name="Work"></Element>
+
         <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
           <h1 style={{ fontWeight: "bold" }}>WORK HISTORY</h1>
           <br></br><br></br>
@@ -261,14 +299,77 @@ function MainPage() {
             <h3 style={{ fontWeight: "bold" }} className="col-md-5">Transaera</h3>
             <h5 className="offset-md-4">Feb 2019 - Sep 2019</h5>
           </div>
-          <h5 style={{ color:"gray" }}>Simulation & Modeling Intern - Global Cooling Prize</h5>
-          <div style={{marginLeft:"1%"}}>
+          <h5 style={{ color: "gray" }}>Simulation & Modeling Intern - Global Cooling Prize</h5>
+          <div style={{ marginLeft: "1%" }}>
             <h6>- Selected as top 8 of Global Cooling Prize with 140 competitors from 31 countries.</h6>
             <h6>- Performed first principle level calculation of heat transfer for vapor compression(HVAC) system</h6>
             <h6>- Developped thermal model to simulate system operation process and energy consumption using Matlab</h6>
             <h6>- Provided design insight from data analysis</h6>
           </div>
           <br></br><br></br>
+        </div>
+        <hr></hr>
+        {/* -----Projects----- */}
+        <Element name="Projects"></Element>
+
+        <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
+          <h1 style={{ fontWeight: "bold" }}>PROJECTS</h1>
+          <br></br><br></br>
+          <div className="row">
+            <img src={tablify} className="col-md-4" alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
+            <div className="offset-md-1 col-md-5">
+              <h3 style={{ fontWeight: "bold" }}>Tablify</h3>
+              <br></br>
+              <h5>Tablify is a simple, streamlined, and user-friendly application that allows restaurant owners and staff to build their custom restaurant layout from scratch, assign customers to tables, and track those customers' meals - individual items and meal stages - from start to finish.</h5>
+              <br></br>
+              <div>
+                <a href="https://github.com/kimiadarden/Tablify"><i><AiFillGithub size={50} /></i></a>
+                <a href="https://thawing-reaches-88395.herokuapp.com/" style={{ marginLeft: "2%" }}><i><AiOutlineGlobal size={50} /></i></a>
+              </div>
+            </div>
+          </div>
+          <br></br><br></br>
+          <hr></hr>
+
+          <div className="row">
+            <img src={gameFound} className="col-md-4" alt="gameFound" size={25} style={{ marginLeft: "2%" }}></img>
+            <div className="offset-md-1 col-md-5">
+              <h3 style={{ fontWeight: "bold" }}>GameFound</h3>
+              <br></br>
+              <h5>A game-finding application that will provide you with a wish list of pertinent games to play based on provided criteria. Powered by RAWG Video Game Database API.</h5>
+              <br></br>
+              <div>
+                <a href="https://github.com/kevin-salamon/Game-Found"><i><AiFillGithub size={50} /></i></a>
+                <a href="https://kevin-salamon.github.io/Game-Found/" style={{ marginLeft: "2%" }}><i><AiOutlineGlobal size={50} /></i></a>
+              </div>
+            </div>
+          </div>
+          <br></br><br></br>
+          <hr></hr>
+
+          <div className="row">
+            <img src={voca} className="col-md-4" alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
+
+            <div className="offset-md-1 col-md-5">
+              <h3 style={{ fontWeight: "bold" }}>Voca</h3>
+              <br></br>
+              <h5>Voca allows job seekers to keep track of their job applications, assign follow ups, and organize their job hunt in a single place. Users can search & filter their applications by title, employer, and more. Applications are color coded to indicate followup dates in the near future. We hope that this app will relieve some of the stress of simultaneously managing many disparate job applications.</h5>
+              <br></br>
+              <div>
+                <a href="https://github.com/kevin-salamon/Voca"><i><AiFillGithub size={50} /></i></a>
+                <a href="https://devpost.com/software/voca" style={{ marginLeft: "2%" }}><i><AiOutlineGlobal size={50} /></i></a>
+              </div>
+            </div>
+          </div>
+          <br></br><br></br>
+          <hr></hr>
+          {/* <div className="row">
+            <img src={googleBook} className="col-md-4" alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
+            <p className="offset-md-1 col-md-5">123</p>
+          </div>
+          <br></br><br></br>
+
+          <br></br><br></br> */}
         </div>
       </main>
     </div>
