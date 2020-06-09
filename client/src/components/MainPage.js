@@ -2,6 +2,7 @@
 import React from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Tooltip from '@material-ui/core/Tooltip';
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -238,16 +239,33 @@ function MainPage() {
           <br></br><br></br>
           <h3 >Programming Languages & Tools</h3>
           <br></br><br></br>
+          <Tooltip title="HTML">
           <i><AiFillHtml5 size={50} /></i>
-          <i style={{ marginLeft: "2%" }} titel="MongoDB"><DiMongodb size={50} /></i>
+          </Tooltip>
+          <Tooltip title="MongoDB">
+          <i style={{ marginLeft: "2%" }}><DiMongodb size={50} /></i>
+          </Tooltip>
+          <Tooltip title="React.js">
           <i style={{ marginLeft: "2%" }}><FaReact size={50} /></i>
+          </Tooltip>
+          <Tooltip title="CSS">
           <i style={{ marginLeft: "2%" }}><IoLogoCss3 size={50} /></i>
+          </Tooltip>
+          <Tooltip title="JavaScript">
           <i style={{ marginLeft: "2%" }}><IoLogoJavascript size={50} /></i>
+          </Tooltip>
+          <Tooltip title="Node.js">
           <i style={{ marginLeft: "2%" }}><IoLogoNodejs size={50} /></i>
+          </Tooltip>
+          <Tooltip title="Npm">
           <i style={{ marginLeft: "2%" }}><FaNpm size={50} /></i>
+          </Tooltip>
+          <Tooltip title="Mysql">
           <i style={{ marginLeft: "2%" }}><DiMysql size={50} /></i>
-          <img src={Jquery} alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
-
+          </Tooltip>
+          <Tooltip title="JQuery">
+          <img src={Jquery} alt="JQuery" size={50} style={{ marginLeft: "2%" }}></img>
+          </Tooltip>
           <br></br><br></br><br></br>
           <h3>Work Flow</h3>
           <div className="row" style={{ marginTop: "2%" }}>
