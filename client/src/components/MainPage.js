@@ -13,6 +13,10 @@ import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
+import BuildIcon from '@material-ui/icons/Build';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import WidgetsIcon from '@material-ui/icons/Widgets';
+import WorkIcon from '@material-ui/icons/Work';
 import FolderIcon from "@material-ui/icons/Folder";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
@@ -163,7 +167,7 @@ function MainPage() {
         <List>
           <Link activeClass="active" to="Information" smooth={true} duration={250} style={{ display: "inline-block" }}>
             <ListItem button key={"Information"} >
-              <ListItemIcon style={{ marginLeft:"1%"}}>
+              <ListItemIcon style={{ marginLeft: "1%" }}>
                 <AssignmentIndIcon />
               </ListItemIcon>
               <ListItemText primary={"Information"} />
@@ -173,7 +177,7 @@ function MainPage() {
           <Link activeClass="active" to="Skills" smooth={true} duration={250} style={{ display: "inline-block" }}>
             <ListItem button key={"Skills"} >
               <ListItemIcon>
-                <GiMuscleUp />
+                <BuildIcon />
               </ListItemIcon>
               <ListItemText primary={"Skills"} />
             </ListItem>
@@ -182,7 +186,7 @@ function MainPage() {
           <Link activeClass="active" to="Education" smooth={true} duration={250} style={{ display: "inline-block" }}>
             <ListItem button key={"Education"} >
               <ListItemIcon>
-                <BsBookHalf />
+                <MenuBookIcon />
               </ListItemIcon>
               <ListItemText primary={"Education"} />
             </ListItem>
@@ -191,7 +195,7 @@ function MainPage() {
           <Link activeClass="active" to="Work" smooth={true} duration={250} style={{ display: "inline-block" }}>
             <ListItem button key={"Work"} >
               <ListItemIcon>
-                <GrUserWorker />
+                <WorkIcon />
               </ListItemIcon>
               <ListItemText primary={"Work exp"} />
             </ListItem>
@@ -200,34 +204,40 @@ function MainPage() {
           <Link activeClass="active" to="Projects" smooth={true} duration={250} style={{ display: "inline-block" }}>
             <ListItem button key={"Work"} >
               <ListItemIcon>
-                <FolderIcon />
+                <WidgetsIcon />
               </ListItemIcon>
               <ListItemText primary={"Projects"} />
             </ListItem>
           </Link>
-          
+
         </List>
 
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Element name="Information"></Element>
-        <div className="row" style={{ marginTop: "8%", marginBottom: "10%" }}>
+        <div style={{ marginTop: "4%", marginBottom: "10%" }}>
 
-          <div className="col-md-3">
-            <img src={photo} alt="Chih-chien Lin" style={{ height: 300, width: 200, marginLeft: "20%" }}></img>
+          <div className="row">
+            <img src={photo} alt="Chih-chien Lin" className="mt-5 mb-1 rounded-pill image-large hide-small" style={{ height: 420, width: 280, marginLeft: "auto", marginRight: "auto" }}></img>
           </div>
-          <div className="col-md-8">
-            <Typography paragraph>
-              <h2 id="Section1">Chih-Chien Lin</h2>
-              <p>Colts Neck, NJ 07722 - (732)8043047 - <a class="text-lowercase" href="mailto:chihchienlin93@gmail.com">chihchienlin93@gmail.com</a></p>
-              <p>I am a full Stack Web Developer / Mechanical Engineer, passionate to programming skills and problem-solving. I love to learn and practice new technologies by working with other programmers to build cool projects! </p>
-              <br></br>
 
-            </Typography>
+          <Typography paragraph>
+            <div style={{ textAlign: "center" }}>
+              <h1 id="Section1" >Chih-Chien Lin</h1>
+              <br></br>
+              <h3>Colts Neck, NJ 07722 - (732)8043047 - <a class="text-lowercase" href="mailto:chihchienlin93@gmail.com">chihchienlin93@gmail.com</a></h3>
+              <br></br>
+              <h3>I am a full Stack Web Developer / Mechanical Engineer, passionate to programming skills and problem-solving. </h3>
+              <h3>I love to learn and practice new technologies by working with other programmers to build cool projects! </h3>
+            </div>
             <br></br>
-            <a href="https://github.com/Chih-Chien-Lin"><i><AiFillGithub size={50} /></i></a>
-            <a href="https://www.linkedin.com/in/chih-chien-justin-lin-691016ba/"><i><AiFillLinkedin size={50} style={{ marginLeft: "5%" }} /></i></a>
+          </Typography>
+          <br></br>
+          {/* <div style={{marginLeft: "auto", marginRight: "auto"}}> */}
+          <div className="row" >
+            <a href="https://github.com/Chih-Chien-Lin" style={{marginLeft:"auto", marginRight:"5%"}}><i ><AiFillGithub size={100} /></i></a>
+            <a href="https://www.linkedin.com/in/chih-chien-justin-lin-691016ba/" style={{marginRight:"auto", marginLeft:"0%"}}><i ><AiFillLinkedin size={100}  /></i></a>
           </div>
         </div>
 
@@ -240,31 +250,31 @@ function MainPage() {
           <h3 >Programming Languages & Tools</h3>
           <br></br><br></br>
           <Tooltip title="HTML">
-          <i><AiFillHtml5 size={50} /></i>
+            <i><AiFillHtml5 size={50} /></i>
           </Tooltip>
           <Tooltip title="MongoDB">
-          <i style={{ marginLeft: "2%" }}><DiMongodb size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><DiMongodb size={50} /></i>
           </Tooltip>
           <Tooltip title="React.js">
-          <i style={{ marginLeft: "2%" }}><FaReact size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><FaReact size={50} /></i>
           </Tooltip>
           <Tooltip title="CSS">
-          <i style={{ marginLeft: "2%" }}><IoLogoCss3 size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><IoLogoCss3 size={50} /></i>
           </Tooltip>
           <Tooltip title="JavaScript">
-          <i style={{ marginLeft: "2%" }}><IoLogoJavascript size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><IoLogoJavascript size={50} /></i>
           </Tooltip>
           <Tooltip title="Node.js">
-          <i style={{ marginLeft: "2%" }}><IoLogoNodejs size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><IoLogoNodejs size={50} /></i>
           </Tooltip>
           <Tooltip title="Npm">
-          <i style={{ marginLeft: "2%" }}><FaNpm size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><FaNpm size={50} /></i>
           </Tooltip>
           <Tooltip title="Mysql">
-          <i style={{ marginLeft: "2%" }}><DiMysql size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><DiMysql size={50} /></i>
           </Tooltip>
           <Tooltip title="JQuery">
-          <img src={Jquery} alt="JQuery" size={50} style={{ marginLeft: "2%" }}></img>
+            <img src={Jquery} alt="JQuery" size={50} style={{ marginLeft: "2%" }}></img>
           </Tooltip>
           <br></br><br></br><br></br>
           <h3>Work Flow</h3>
