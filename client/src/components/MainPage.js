@@ -1,6 +1,7 @@
 
 import React from "react";
 import clsx from "clsx";
+import { ProgressBar } from "react-bootstrap";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Tooltip from '@material-ui/core/Tooltip';
 import Drawer from "@material-ui/core/Drawer";
@@ -236,8 +237,8 @@ function MainPage() {
           <br></br>
           {/* <div style={{marginLeft: "auto", marginRight: "auto"}}> */}
           <div className="row" >
-            <a href="https://github.com/Chih-Chien-Lin" style={{marginLeft:"auto", marginRight:"5%"}}><i ><AiFillGithub size={100} /></i></a>
-            <a href="https://www.linkedin.com/in/chih-chien-justin-lin-691016ba/" style={{marginRight:"auto", marginLeft:"0%"}}><i ><AiFillLinkedin size={100}  /></i></a>
+            <a href="https://github.com/Chih-Chien-Lin" style={{ marginLeft: "auto", marginRight: "5%" }}><i ><AiFillGithub size={100} /></i></a>
+            <a href="https://www.linkedin.com/in/chih-chien-justin-lin-691016ba/" style={{ marginRight: "auto", marginLeft: "0%" }}><i ><AiFillLinkedin size={100} /></i></a>
           </div>
         </div>
 
@@ -247,7 +248,7 @@ function MainPage() {
         <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
           <h1 style={{ fontWeight: "bold" }}>SKILLS</h1>
           <br></br><br></br>
-          <h3 >Programming Languages & Tools</h3>
+          <h2 >Programming Languages & Tools</h2>
           <br></br><br></br>
           <Tooltip title="HTML">
             <i><AiFillHtml5 size={50} /></i>
@@ -277,18 +278,18 @@ function MainPage() {
             <img src={Jquery} alt="JQuery" size={50} style={{ marginLeft: "2%" }}></img>
           </Tooltip>
           <br></br><br></br><br></br>
-          <h3>Work Flow</h3>
+          <h2>Work Flow</h2>
           <div className="row" style={{ marginTop: "2%" }}>
             <i className="col-md-1"><FaCheckSquare size={30} style={{ marginLeft: "50%" }} /></i>
-            <p className="col-md-9" style={{ marginTop: "5px" }}>Cross Functional Team</p>
+            <h4 className="col-md-9" style={{ marginTop: "5px" }}>Cross Functional Team</h4>
           </div>
           <div className="row" style={{ marginTop: "1%" }}>
             <i className="col-md-1"><FaCheckSquare size={30} style={{ marginLeft: "50%" }} /></i>
-            <p className="col-md-9" style={{ marginTop: "5px" }}>MERN Stack Developer</p>
+            <h4 className="col-md-9" style={{ marginTop: "5px" }}>MERN Stack Developer</h4>
           </div>
           <div className="row" style={{ marginTop: "1%" }}>
             <i className="col-md-1"><FaCheckSquare size={30} style={{ marginLeft: "50%" }} /></i>
-            <p className="col-md-9" style={{ marginTop: "5px" }}>PWA</p>
+            <h4 className="col-md-9" style={{ marginTop: "5px" }}>PWA</h4>
           </div>
 
         </div>
@@ -354,6 +355,42 @@ function MainPage() {
                 <a href="https://github.com/kimiadarden/Tablify"><i><AiFillGithub size={50} /></i></a>
                 <a href="https://thawing-reaches-88395.herokuapp.com/" style={{ marginLeft: "2%" }}><i><AiOutlineGlobal size={50} /></i></a>
               </div>
+              <br></br>
+              <div className="row">
+                <div className="col-md-8" >
+                  <ProgressBar striped variant="success" now={60} label={`React.js`} key={1} style={{marginTop:"1%"}}/>
+                  <ProgressBar variant="info" now={40} label={'MongoDB'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar variant="primary" now={30} label={'Firebase'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar variant="warning" now={20} label={'CSS'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar striped variant="danger" now={20} label={'HTML'} key={3} style={{marginTop:"1%"}}/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br></br><br></br>
+          <hr></hr>
+          <div className="row">
+            <img src={voca} className="col-md-4" alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
+
+            <div className="offset-md-1 col-md-5">
+              <h3 style={{ fontWeight: "bold" }}>Voca</h3>
+              <br></br>
+              <h5>Voca allows job seekers to keep track of their job applications, assign follow ups, and organize their job hunt in a single place. Users can search & filter their applications by title, employer, and more. Applications are color coded to indicate followup dates in the near future. We hope that this app will relieve some of the stress of simultaneously managing many disparate job applications.</h5>
+              <br></br>
+              <div>
+                <a href="https://github.com/kevin-salamon/Voca"><i><AiFillGithub size={50} /></i></a>
+                <a href="https://devpost.com/software/voca" style={{ marginLeft: "2%" }}><i><AiOutlineGlobal size={50} /></i></a>
+              </div>
+              <br></br>
+              <div className="row">
+                <div className="col-md-8" >
+                  <ProgressBar striped variant="success" now={60} label={`React.js`} key={1} style={{marginTop:"1%"}}/>
+                  <ProgressBar variant="info" now={40} label={'MongoDB'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar variant="primary" now={30} label={'Python'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar variant="warning" now={20} label={'CSS'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar striped variant="danger" now={20} label={'HTML'} key={3} style={{marginTop:"1%"}}/>
+                </div>
+              </div>
             </div>
           </div>
           <br></br><br></br>
@@ -370,22 +407,14 @@ function MainPage() {
                 <a href="https://github.com/kevin-salamon/Game-Found"><i><AiFillGithub size={50} /></i></a>
                 <a href="https://kevin-salamon.github.io/Game-Found/" style={{ marginLeft: "2%" }}><i><AiOutlineGlobal size={50} /></i></a>
               </div>
-            </div>
-          </div>
-          <br></br><br></br>
-          <hr></hr>
-
-          <div className="row">
-            <img src={voca} className="col-md-4" alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
-
-            <div className="offset-md-1 col-md-5">
-              <h3 style={{ fontWeight: "bold" }}>Voca</h3>
               <br></br>
-              <h5>Voca allows job seekers to keep track of their job applications, assign follow ups, and organize their job hunt in a single place. Users can search & filter their applications by title, employer, and more. Applications are color coded to indicate followup dates in the near future. We hope that this app will relieve some of the stress of simultaneously managing many disparate job applications.</h5>
-              <br></br>
-              <div>
-                <a href="https://github.com/kevin-salamon/Voca"><i><AiFillGithub size={50} /></i></a>
-                <a href="https://devpost.com/software/voca" style={{ marginLeft: "2%" }}><i><AiOutlineGlobal size={50} /></i></a>
+              <div className="row">
+                <div className="col-md-8" >
+                  
+                  <ProgressBar variant="primary" now={30} label={'HTML'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar variant="warning" now={20} label={'CSS'} key={2} style={{marginTop:"1%"}}/>
+                  <ProgressBar striped variant="danger" now={20} label={'API'} key={3} style={{marginTop:"1%"}}/>
+                </div>
               </div>
             </div>
           </div>
