@@ -1,9 +1,14 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
+// Aos is the animated css
+import Aos from "aos";
+import "aos/dist/aos.css"
+// progressBar for project section
 import { ProgressBar } from "react-bootstrap";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+// Tooltip for skills section
 import Tooltip from '@material-ui/core/Tooltip';
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -18,13 +23,11 @@ import BuildIcon from '@material-ui/icons/Build';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import WidgetsIcon from '@material-ui/icons/Widgets';
 import WorkIcon from '@material-ui/icons/Work';
-import FolderIcon from "@material-ui/icons/Folder";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import MailIcon from "@material-ui/icons/Mail";
 import photo from "../asset/image/personal_photo.JPG"
 import Jquery from "../asset/image/jQuery.png"
 import gameFound from "../asset/image/gameFound.png"
@@ -33,9 +36,6 @@ import tablify from "../asset/image/tablify.png"
 import voca from "../asset/image/Voca.png"
 import { AiFillGithub, AiFillLinkedin, AiFillHtml5, AiOutlineGlobal } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoNodejs } from "react-icons/io"
-import { BsBookHalf } from "react-icons/bs"
-import { GiMuscleUp } from "react-icons/gi"
-import { GrUserWorker } from "react-icons/gr"
 import { FaReact, FaNpm, FaCheckSquare } from "react-icons/fa"
 import { DiMysql, DiMongodb } from "react-icons/di"
 import Scroll from "react-scroll"
@@ -110,6 +110,9 @@ function MainPage() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  useEffect(() => {
+    Aos.init({duration:1500});
+  },[])
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -245,7 +248,7 @@ function MainPage() {
         <hr></hr>
         {/* -----SKills----- */}
         <Element name="Skills"></Element>
-        <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
+        <div data-aos="fade-right" style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
           <h1 style={{ fontWeight: "bold" }}>SKILLS</h1>
           <br></br><br></br>
           <h2 >Programming Languages & Tools</h2>
@@ -254,7 +257,7 @@ function MainPage() {
             <i><AiFillHtml5 size={50} /></i>
           </Tooltip>
           <Tooltip title="MongoDB">
-            <i style={{ marginLeft: "2%" }}><DiMongodb size={50} /></i>
+            <i style={{ marginLeft: "2%" }} ><DiMongodb size={50} /></i>
           </Tooltip>
           <Tooltip title="React.js">
             <i style={{ marginLeft: "2%" }}><FaReact size={50} /></i>
@@ -296,7 +299,7 @@ function MainPage() {
         <hr></hr>
         {/* -----Education----- */}
         <Element name="Education"></Element>
-        <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
+        <div data-aos="fade-right" style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
           <h1 style={{ fontWeight: "bold" }}>EDUCATION</h1>
           <br></br><br></br>
           <div className="row">
@@ -321,7 +324,7 @@ function MainPage() {
         {/* -----Work history----- */}
         <Element name="Work"></Element>
 
-        <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
+        <div data-aos="fade-right" style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
           <h1 style={{ fontWeight: "bold" }}>WORK HISTORY</h1>
           <br></br><br></br>
           <div className="row">
@@ -342,9 +345,9 @@ function MainPage() {
         <Element name="Projects"></Element>
 
         <div style={{ marginTop: "8%", marginBottom: "8%", marginLeft: "5%" }}>
-          <h1 style={{ fontWeight: "bold" }}>PROJECTS</h1>
+          <h1 data-aos="fade-right" style={{ fontWeight: "bold" }}>PROJECTS</h1>
           <br></br><br></br>
-          <div className="row">
+          <div data-aos="zoom-in" className="row">
             <img src={tablify} className="col-md-4" alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
             <div className="offset-md-1 col-md-5">
               <h3 style={{ fontWeight: "bold" }}>Tablify</h3>
@@ -369,7 +372,7 @@ function MainPage() {
           </div>
           <br></br><br></br>
           <hr></hr>
-          <div className="row">
+          <div data-aos="zoom-in" className="row">
             <img src={voca} className="col-md-4" alt="Jquery" size={50} style={{ marginLeft: "2%" }}></img>
 
             <div className="offset-md-1 col-md-5">
@@ -396,7 +399,7 @@ function MainPage() {
           <br></br><br></br>
           <hr></hr>
 
-          <div className="row">
+          <div data-aos="zoom-in" className="row">
             <img src={gameFound} className="col-md-4" alt="gameFound" size={25} style={{ marginLeft: "2%" }}></img>
             <div className="offset-md-1 col-md-5">
               <h3 style={{ fontWeight: "bold" }}>GameFound</h3>
