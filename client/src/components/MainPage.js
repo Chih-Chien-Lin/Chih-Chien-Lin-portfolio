@@ -230,7 +230,7 @@ function MainPage() {
             <div style={{ textAlign: "center" }}>
               <h1 id="Section1" >Chih-Chien Lin</h1>
               <br></br>
-              <h3>Colts Neck, NJ 07722 - (732)8043047 - <a class="text-lowercase" href="mailto:chihchienlin93@gmail.com">chihchienlin93@gmail.com</a></h3>
+              <h3>Colts Neck, NJ 07722 - (732)8043047 - <a class="text-lowercase" href="mailto:chihlin@deloitte.com">chihlin@deloitte.com</a></h3>
               <br></br>
               <h3>I am a full Stack Web Developer / Mechanical Engineer, passionate to programming skills and problem-solving. </h3>
               <h3>I love to learn and practice new technologies by working with other programmers to build cool projects! </h3>
