@@ -36,7 +36,7 @@ import tablify from "../asset/image/tablify.png"
 import voca from "../asset/image/Voca.png"
 import { AiFillGithub, AiFillLinkedin, AiFillHtml5, AiOutlineGlobal } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoNodejs } from "react-icons/io"
-import { FaReact, FaNpm, FaCheckSquare } from "react-icons/fa"
+import { FaReact, FaNpm, FaCheckSquare, FaSalesforce } from "react-icons/fa"
 import { DiMysql, DiMongodb } from "react-icons/di"
 import Scroll from "react-scroll"
 let Link = Scroll.Link
@@ -253,8 +253,11 @@ function MainPage() {
           <br></br><br></br>
           <h2 >Programming Languages & Tools</h2>
           <br></br><br></br>
+          <Tooltip title="Salesforce">
+            <i><FaSalesforce size={50} /></i>
+          </Tooltip>
           <Tooltip title="HTML">
-            <i><AiFillHtml5 size={50} /></i>
+            <i style={{ marginLeft: "2%" }}><AiFillHtml5 size={50} /></i>
           </Tooltip>
           <Tooltip title="MongoDB">
             <i style={{ marginLeft: "2%" }} ><DiMongodb size={50} /></i>
@@ -292,7 +295,7 @@ function MainPage() {
           </div>
           <div className="row" style={{ marginTop: "1%" }}>
             <i className="col-md-1"><FaCheckSquare size={30} style={{ marginLeft: "50%" }} /></i>
-            <h4 className="col-md-9" style={{ marginTop: "5px" }}>PWA</h4>
+            <h4 className="col-md-9" style={{ marginTop: "5px" }}>Salesforce Commnity developer</h4>
           </div>
 
         </div>
