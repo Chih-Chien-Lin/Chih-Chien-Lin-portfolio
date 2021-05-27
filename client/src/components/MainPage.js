@@ -331,7 +331,7 @@ function MainPage() {
             <h3 style={{ fontWeight: "bold" }} className="col-md-5">Deloitte LLC</h3>
             <h5 className="offset-md-4">Sep 2020 - now</h5>
           </div>
-          <h5 style={{ color: "gray" }}>Solution Analyst - Salesforce Developer</h5>
+          <h5 style={{ color: "gray" }}>Solution Analyst - Salesforce Developer </h5>
           <div style={{ marginLeft: "1%" }}>
             <h6>- Selected as top 8 of Global Cooling Prize with 140 competitors from 31 countries.</h6>
             <h6>- Performed first principle level calculation of heat transfer for vapor compression(HVAC) system</h6>
