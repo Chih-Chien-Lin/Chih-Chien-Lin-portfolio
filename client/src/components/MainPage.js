@@ -333,10 +333,11 @@ function MainPage() {
           </div>
           <h5 style={{ color: "gray" }}>Solution Analyst - Salesforce Developer </h5>
           <div style={{ marginLeft: "1%" }}>
-            <h6>- Selected as top 8 of Global Cooling Prize with 140 competitors from 31 countries.</h6>
-            <h6>- Performed first principle level calculation of heat transfer for vapor compression(HVAC) system</h6>
-            <h6>- Developped thermal model to simulate system operation process and energy consumption using Matlab</h6>
-            <h6>- Provided design insight from data analysis</h6>
+            <h6>- Develop Salesforce community using Lightning Web Component(LWC), Apex class, and Aura component</h6>
+            <h6>- Draft design document to bridge the communication between developer team and functional team</h6>
+            <h6>- Draft screen mock-up for new functionality/product by following the requirement</h6>
+            <h6>- Document the code/application flow with detailed code explanation </h6>
+            <h6>- Draft configuration of validations for the application.</h6>
           </div>
           <br></br><br></br>
           <div className="row">
